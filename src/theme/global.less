@@ -1,0 +1,86 @@
+body {
+    /* 隐藏滚动条 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  /* WebKit (Chrome, Safari, etc.) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+.hljs{
+    padding: 10px;
+    line-height: 24px;
+    border-radius: 4px;
+}
+
+//用``包起来的代码
+p>code, li>code{
+    padding: 0px 6px;
+    margin: 2px 4px;
+    border-radius: 5px;
+    white-space: break-spaces;
+    color: #1f1f20;
+    background-color: #EBEEF5;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.copy-button{
+    position: relative;
+    left: calc(100% - 60px);
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        color: #A8ABB2;
+    }
+}
+
+.action-button-inter{
+    cursor: pointer;
+    color: #606266;
+    transition-duration: 0.4s;
+    &:hover{
+        color: #F56C6C;
+    }
+}
+
+.code-main-wrapper{
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+
+.list-button{
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    &:hover{
+        color: #F56C6C !important;
+    }
+}
+
+.conversation p{
+    margin: 2px;
+}
+
+textarea{
+    font-size: 16.5px !important;
+    color: #303133 !important;
+}
+
+#app{
+    background-color: white;
+}
+
+#appView[theme = 'night']{
+    filter: invert(95%) contrast(88%) brightness(100%) hue-rotate(180deg);
+    img{
+        filter: invert(100%) contrast(83%) brightness(120%) hue-rotate(180deg);
+    }
+    pre{
+        filter: invert(100%) contrast(95%) brightness(102%) hue-rotate(180deg)
+    }
+}
