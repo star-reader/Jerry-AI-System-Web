@@ -37,20 +37,7 @@ const form = ref({
 
 const onSubmit = () => {
     const cert = dataEncrypt(toRaw(form.value))
-    axios.post(api.login,{'certificate': cert}).then(res => {
-        if (res.data.login === 0){
-            Pubsub.publish('login-action', 0)
-            return ElMessage.error('登录失败')
-        }
-        const token = res.data.token
-        localStorage.setItem('token', token)
-        localStorage.setItem('certificate', cert)
-        Pubsub.publish('login-action', 1)
-        router.push('/chat')
-    }).catch(() => {
-        Pubsub.publish('login-action', 0)
-        return ElMessage.error('登录失败')
-    })
+    // 在此处自定义修改你的登录方法
 }
 </script>
 
