@@ -77,7 +77,7 @@ import logo from '@/assets/pic/Jerry.png'
 import chatFloatArr from '@/config/helloArr.json'
 
 const isHaveConversation: Ref<boolean> = ref(false)
-const isOpenInfoPage = ref(true)
+const isOpenInfoPage = ref(false)
 const chatFloatWord = ref('')
 const tabHeight = ref('800px')
 
